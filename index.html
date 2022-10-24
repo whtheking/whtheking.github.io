@@ -251,6 +251,155 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/10/24/Apex%E7%9A%84%E9%9F%B3%E6%95%88%E8%AE%BE%E8%AE%A1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Velvet Palace">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/10/24/Apex%E7%9A%84%E9%9F%B3%E6%95%88%E8%AE%BE%E8%AE%A1/" itemprop="url">Apex的音效设计</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2022-10-24T11:23:23+08:00">
+                2022-10-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%AE%BE%E8%AE%A1/" itemprop="url" rel="index">
+                    <span itemprop="name">设计</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>发现Apex的音效设计很值得研究，但是好像没有相关的讨论，尝试分析一下</p>
+<h2 id="差别"><a href="#差别" class="headerlink" title="差别"></a>差别</h2><p>首先在FPS游戏里音效的作用是什么?<br>我觉得重点是反馈，就像我们会去评价一款动作游戏的打击感够不够优秀，我觉得评价FPS游戏应该去评价他的反馈感，试想一下一款FPS游戏没有枪声没有被击中反馈和击中反馈。<br>游戏的反馈可能来自于环境，也可能来自于NPC，敌人。FPS中无疑对手是你反馈的最重要来源。环境音效甚至可以在FPS中可有可无（当然Apex中一些环境音效也很重要）</p>
+<p>抽象FPS的机制出来就是<code>发现敌人-开枪攻击敌人-打死敌人</code>这一机制循环 而其中音效出现的位置就在 开枪攻击敌人和打死敌人这里</p>
+<p>开枪会发出枪声这点其实没有太多的讨论必要，因为属于最基础的部分，但是Apex中其实加了些比较有趣的细节，比如弹夹到最后几发时开枪声音会增加部分低沉的杂音（我不确定能否在玩法上带来什么改变，因为大家基本都是一梭子打到底，不会真的有人听到声音提前换弹吧），以及暴走，哨兵充能后不同的音效之类的。</p>
+<p>其实最让我觉得有趣的是Apex里的受击音效， Apex的受击音效很丰富，击中护甲，击中肉身，击中头部，以及破甲和击倒； 可以说Apex中的护甲是游戏里很重要的一个机制（特别是进化护甲标配了之后），护甲带来了Apex TTK长，拉电比打包更快等一些特性。相比于PUBG虽然高等级的甲都增加了双方对枪的容错率，但Apex击中可以知道甲的等级，以及甲可以回复和升级带来了更多的策略性，因此<strong>甲</strong>在Apex里很重要，而知道<strong>甲的情况</strong>这件事情，也很重要，所以不同的击中音效设计我觉得是个很好的点； 同样包括击倒音效，这在团竞大逃杀里带来了前压的机会。高频的破甲和倒地音效告诉了你，这件事很重要。（守望先锋中的击中音效差别只有头和身体，因为护甲这件事在游戏中并没有很重要）</p>
+<p><a target="_blank" rel="noopener" href="https://www.asoundeffect.com/apex-legends-sound/">HOW APEX LEGENDS’ STUNNING SOUND WAS CREATED</a>这篇文章提到Apex分区域做了不同的环境反馈，目的是增加游戏的沉浸感，比如增大整个地图枪声的传播等；在游戏的测试中我发现在空旷的地带枪声具有回音，而室内则是更加低沉。 但是在诸王峡谷的实验室坑处其实枪声没有产生回声，所以推测做法是在地图搭建时就确定好了不同音效的区域，估计是根据区域加不同的滤波。 另外还有投掷物的声音会被墙壁阻隔等细节。</p>
+<p><a target="_blank" rel="noopener" href="https://answers.ea.com/t5/General-Discussion/Worst-sound-design-ever/td-p/7770769">EA HQ</a>还有老哥反馈枪声太杂听不到脚步声，但是现在版本我觉得还是挺清楚的，不知道是改过还是什么。</p>
+<p>###补充学习<br>动物森的音效设计（和正文不太相关）<br><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1kQ4y1K73T/?spm_id_from=333.337.search-card.all.click&vd_source=44d84ab5d1c80d34ca6ccf8855d6d8ea">Wholesome Sound Design in Animal Crossing: New Horizons</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://example.com/2022/10/13/%E5%85%B3%E4%BA%8E%E6%8B%BE%E5%8F%96%E8%BF%99%E4%BB%B6%E4%BA%8B/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -724,7 +873,7 @@
               
                 <a href="/archives/%7C%7C%20archive">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -746,7 +895,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
