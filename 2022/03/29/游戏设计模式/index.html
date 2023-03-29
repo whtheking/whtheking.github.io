@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="设计模式," />
 
 
 
@@ -79,15 +79,29 @@
 
 
 
-<meta name="description" content="King&#96;s Blog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Velvet Palace">
-<meta property="og:url" content="http://example.com/index.html">
+<meta name="description" content="游戏编程模式，常看常新毛星云大佬的编程模式笔记，以及unity实现案例 （RIP GOF for the most命令模式将命令行为转换为对象 解藕 命令发出的对象和执行命令的对象   可更进一步提供undo重写 1234567class Command&amp;#123;public:  virtual ~Command() &amp;#123;&amp;#125;  virtual void execute() &#x3D;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="游戏编程模式">
+<meta property="og:url" content="http://example.com/2022/03/29/%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/index.html">
 <meta property="og:site_name" content="Velvet Palace">
-<meta property="og:description" content="King&#96;s Blog">
+<meta property="og:description" content="游戏编程模式，常看常新毛星云大佬的编程模式笔记，以及unity实现案例 （RIP GOF for the most命令模式将命令行为转换为对象 解藕 命令发出的对象和执行命令的对象   可更进一步提供undo重写 1234567class Command&amp;#123;public:  virtual ~Command() &amp;#123;&amp;#125;  virtual void execute() &#x3D;">
 <meta property="og:locale">
+<meta property="og:image" content="http://example.com/imgs/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20230329120448.png">
+<meta property="og:image" content="http://example.com/imgs/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20230329120506.png">
+<meta property="og:image" content="http://example.com/imgs/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20230329120527.png">
+<meta property="og:image" content="http://example.com/imgs/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20230329120540.png">
+<meta property="og:image" content="http://example.com/imgs/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20230329120554.png">
+<meta property="og:image" content="http://example.com/imgs/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20230329120609.png">
+<meta property="og:image" content="http://example.com/imgs/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20230329120653.png">
+<meta property="og:image" content="http://example.com/imgs/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20230329120706.png">
+<meta property="og:image" content="http://example.com/imgs/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20230329120716.png">
+<meta property="og:image" content="http://example.com/imgs/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20230329120735.png">
+<meta property="article:published_time" content="2022-03-29T04:25:22.000Z">
+<meta property="article:modified_time" content="2023-03-29T04:26:15.568Z">
 <meta property="article:author" content="King">
+<meta property="article:tag" content="设计模式">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/imgs/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20230329120448.png">
 
 
 
@@ -117,13 +131,13 @@
 
 
 
-  <link rel="canonical" href="http://example.com/"/>
+  <link rel="canonical" href="http://example.com/2022/03/29/游戏设计模式/"/>
 
 
 
 
 
-  <title>Velvet Palace</title>
+  <title>游戏编程模式 | Velvet Palace</title>
   
 
 
@@ -142,8 +156,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -236,598 +249,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/10/24/Apex%E7%9A%84%E9%9F%B3%E6%95%88%E8%AE%BE%E8%AE%A1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Velvet Palace">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/10/24/Apex%E7%9A%84%E9%9F%B3%E6%95%88%E8%AE%BE%E8%AE%A1/" itemprop="url">Apex的音效设计</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2022-10-24T11:23:23+08:00">
-                2022-10-24
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%AE%BE%E8%AE%A1/" itemprop="url" rel="index">
-                    <span itemprop="name">设计</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>发现Apex的音效设计很值得研究，但是好像没有相关的讨论，尝试分析一下</p>
-<h2 id="差别"><a href="#差别" class="headerlink" title="差别"></a>差别</h2><p>首先在FPS游戏里音效的作用是什么?<br>我觉得重点是反馈，就像我们会去评价一款动作游戏的打击感够不够优秀，我觉得评价FPS游戏应该去评价他的反馈感，试想一下一款FPS游戏没有枪声没有被击中反馈和击中反馈。<br>游戏的反馈可能来自于环境，也可能来自于NPC，敌人。FPS中无疑对手是你反馈的最重要来源。环境音效甚至可以在FPS中可有可无（当然Apex中一些环境音效也很重要）</p>
-<p>抽象FPS的机制出来就是<code>发现敌人-开枪攻击敌人-打死敌人</code>这一机制循环 而其中音效出现的位置就在 开枪攻击敌人和打死敌人这里</p>
-<p>开枪会发出枪声这点其实没有太多的讨论必要，因为属于最基础的部分，但是Apex中其实加了些比较有趣的细节，比如弹夹到最后几发时开枪声音会增加部分低沉的杂音（我不确定能否在玩法上带来什么改变，因为大家基本都是一梭子打到底，不会真的有人听到声音提前换弹吧），以及暴走，哨兵充能后不同的音效之类的。</p>
-<p>其实最让我觉得有趣的是Apex里的受击音效， Apex的受击音效很丰富，击中护甲，击中肉身，击中头部，以及破甲和击倒； 可以说Apex中的护甲是游戏里很重要的一个机制（特别是进化护甲标配了之后），护甲带来了Apex TTK长，拉电比打包更快等一些特性。相比于PUBG虽然高等级的甲都增加了双方对枪的容错率，但Apex击中可以知道甲的等级，以及甲可以回复和升级带来了更多的策略性，因此<strong>甲</strong>在Apex里很重要，而知道<strong>甲的情况</strong>这件事情，也很重要，所以不同的击中音效设计我觉得是个很好的点； 同样包括击倒音效，这在团竞大逃杀里带来了前压的机会。高频的破甲和倒地音效告诉了你，这件事很重要。（守望先锋中的击中音效差别只有头和身体，因为护甲这件事在游戏中并没有很重要）</p>
-<p><a target="_blank" rel="noopener" href="https://www.asoundeffect.com/apex-legends-sound/">HOW APEX LEGENDS’ STUNNING SOUND WAS CREATED</a>这篇文章提到Apex分区域做了不同的环境反馈，目的是增加游戏的沉浸感，比如增大整个地图枪声的传播等；在游戏的测试中我发现在空旷的地带枪声具有回音，而室内则是更加低沉。 但是在诸王峡谷的实验室坑处其实枪声没有产生回声，所以推测做法是在地图搭建时就确定好了不同音效的区域，估计是根据区域加不同的滤波。 另外还有投掷物的声音会被墙壁阻隔等细节。</p>
-<p><a target="_blank" rel="noopener" href="https://answers.ea.com/t5/General-Discussion/Worst-sound-design-ever/td-p/7770769">EA HQ</a>还有老哥反馈枪声太杂听不到脚步声，但是现在版本我觉得还是挺清楚的，不知道是改过还是什么。</p>
-<p>###补充学习<br>动物森的音效设计（和正文不太相关）<br><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1kQ4y1K73T/?spm_id_from=333.337.search-card.all.click&vd_source=44d84ab5d1c80d34ca6ccf8855d6d8ea">Wholesome Sound Design in Animal Crossing: New Horizons</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/10/13/%E5%85%B3%E4%BA%8E%E6%8B%BE%E5%8F%96%E8%BF%99%E4%BB%B6%E4%BA%8B/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Velvet Palace">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/10/13/%E5%85%B3%E4%BA%8E%E6%8B%BE%E5%8F%96%E8%BF%99%E4%BB%B6%E4%BA%8B/" itemprop="url">关于拾取这件事</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2022-10-13T17:55:08+08:00">
-                2022-10-13
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%AE%BE%E8%AE%A1/" itemprop="url" rel="index">
-                    <span itemprop="name">设计</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="拾取掉落奖励这件事能不能做成有趣的机制？"><a href="#拾取掉落奖励这件事能不能做成有趣的机制？" class="headerlink" title="拾取掉落奖励这件事能不能做成有趣的机制？"></a>拾取掉落奖励这件事能不能做成有趣的机制？</h3><p>在玩 弹壳特工队时候注意到，吸引经验的磁铁是作为一项’技能’设计的，这件事情就很有趣，拾取掉落奖励可以作为一种玩法么？</p>
-<p>还是从风险回报的角度去思考，它更像是将原先的<code>打死怪-获得奖励</code>拆分成了<code>打死怪-掉落奖励</code>和<code>拾取奖励-真正获得奖励</code><br>也就是说此时我们要思考的是拾取奖励这件行为的奖励与风险，那么风险自然成为了为了拾取奖励可能会被攻击。</p>
-<p>LOL里的先锋之眼也是这么一回事，延时掉落增加了打先锋这件事的风险，也令防守方多了一次博弈的机会。<br>还有cs中拾取敌人枪械这件事（可以被反制利用，用来钓鱼 <em>看我电不电你就完事了</em>）</p>
-<p>毕竟游戏最有趣的地方便是在实现一个个小目标获得奖励这件事上，马里奥如果吃完蘑菇就救回了公主就没什么意思了。</p>
-<p>总之这些基础机制的拆分还是很有趣的。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/10/12/%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1%E4%B8%AD%E7%9A%84%E4%BD%8D%E7%A7%BB/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Velvet Palace">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/10/12/%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1%E4%B8%AD%E7%9A%84%E4%BD%8D%E7%A7%BB/" itemprop="url">游戏设计中的位移</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2022-10-12T23:11:41+08:00">
-                2022-10-12
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%AE%BE%E8%AE%A1/" itemprop="url" rel="index">
-                    <span itemprop="name">设计</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h4 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h4><p>发生位移的原因可以是自发的，或者被迫的</p>
-<p>自发的比如:Celeste、Overwatch中猎空的冲刺技能<br>被迫的比如:LOL里的锤石、OverWatch里的路霸</p>
-<h4 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h4><p>自发：规避伤害、拉近距离、越过障碍 <code>源氏的闪虽然存在造成伤害的作用但是细分逻辑可以变成：拉近距离-造成近战伤害</code><br>被迫（行为发出方）：拉近距离（拉）、拉远距离（推）<code>有些推产生的位移配合地形会产生伤害行为，但这其实属于后果而非目的</code></p>
-<p>位移的机制说白了就是为了产生位移（废话），可以抽象为将目标物移动到有利位置。 在进行机制设计的时候就需要去思考位移会带来什么后果</p>
-<h4 id="后果"><a href="#后果" class="headerlink" title="后果"></a>后果</h4><p>自发：在玩家游玩过程中 有利的位置会有哪些呢？ 比如射击游戏中到达别人无法到达的高出，形成高低优势，或者在劣势中快速移动到掩体后方，到达敌人后方进行偷袭;moba中近战刺客突进到远程角色身边以造成伤害</p>
-<p>被迫：游戏中存在’拉’这个手段的角色大多会是近战角色，一定程度上是为了弥补近远角色博弈时的。存在’推’这个手段的脆皮角色一般会少有其他位移技能，因为此时’自保’这一功能会重复；而一些非脆皮近战角色这些技能大多目的应该是配合地形或其他机制产生伤害<code>拉近距离了之后又把人推走实属欠了</code></p>
-<h4 id="代价"><a href="#代价" class="headerlink" title="代价"></a>代价</h4><p>产生非常规位移这件事有大部分游戏里属于非常大的奖励，拿猎空举例位移可以快速进掩体、逼近奶位；在FPS这种需要快速定位敌人的游戏类型里如果可以无限发生无疑是破坏游戏平衡的，所以一定要让其产生风险。<br>比较常用的手段包括：长时间冷却（即限制次数）,降低生命（增加逼近距离后的风险），长前摇及长后摇（钩子出手的过程，死神E传送的时长及传送位置特效）</p>
-<p>关于风险回报:<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1be4y1d781/?spm_id_from=333.788&vd_source=44d84ab5d1c80d34ca6ccf8855d6d8ea">樱井政博的游戏公开课</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/10/12/%E5%AF%BB%E8%B7%AF%E5%8F%8AAI/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Velvet Palace">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/10/12/%E5%AF%BB%E8%B7%AF%E5%8F%8AAI/" itemprop="url">寻路及AI</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2022-10-12T10:40:43+08:00">
-                2022-10-12
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/AI/" itemprop="url" rel="index">
-                    <span itemprop="name">AI</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="游戏敌人AI避障算法"><a href="#游戏敌人AI避障算法" class="headerlink" title="游戏敌人AI避障算法"></a>游戏敌人AI避障算法</h2><p><a target="_blank" rel="noopener" href="http://www.gameaipro.com/GameAIPro2/GameAIPro2_Chapter18_Context_Steering_Behavior-Driven_Steering_at_the_Macro_Scale.pdf">Context Steering Behavior-Driven Steering at the Macro Scale</a></p>
-<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1ge4y1X7ah/?spm_id_from=333.788.recommend_more_video.4&vd_source=44d84ab5d1c80d34ca6ccf8855d6d8ea">B站视频</a></p>
-<h2 id="UE4中NavMesh生成"><a href="#UE4中NavMesh生成" class="headerlink" title="UE4中NavMesh生成"></a>UE4中NavMesh生成</h2><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/74537236">Recast</a></p>
-<p><a target="_blank" rel="noopener" href="https://www.stefanolazzaroni.com/navigation-mesh-generation">补充</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
 
   
 
@@ -857,9 +281,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/03/29/%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" itemprop="url">游戏编程模式</a></h1>
+          <h1 class="post-title" itemprop="name headline">游戏编程模式</h1>
         
 
         <div class="post-meta">
@@ -931,9 +353,7 @@
       
 
       
-        
-          
-            <p><a target="_blank" rel="noopener" href="https://gpp.tkchu.me/">游戏编程模式，常看常新</a><br><a target="_blank" rel="noopener" href="https://github.com/QianMo/Game-Programmer-Study-Notes/blob/master/Content/%E3%80%8A%E6%B8%B8%E6%88%8F%E7%BC%96%E7%A8%8B%E6%A8%A1%E5%BC%8F%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/README.md">毛星云大佬的编程模式笔记，以及unity实现案例 （RIP</a></p>
+        <p><a target="_blank" rel="noopener" href="https://gpp.tkchu.me/">游戏编程模式，常看常新</a><br><a target="_blank" rel="noopener" href="https://github.com/QianMo/Game-Programmer-Study-Notes/blob/master/Content/%E3%80%8A%E6%B8%B8%E6%88%8F%E7%BC%96%E7%A8%8B%E6%A8%A1%E5%BC%8F%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/README.md">毛星云大佬的编程模式笔记，以及unity实现案例 （RIP</a></p>
 <h1 id="GOF-for-the-most"><a href="#GOF-for-the-most" class="headerlink" title="GOF for the most"></a>GOF for the most</h1><h2 id="命令模式"><a href="#命令模式" class="headerlink" title="命令模式"></a>命令模式</h2><p>将命令行为转换为对象</p>
 <p>解藕 命令发出的对象和执行命令的对象</p>
 <p><img src="/../imgs/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20230329120448.png" alt="固定按钮固定命令"></p>
@@ -1130,8 +550,6 @@
 
 
 
-          
-        
       
     </div>
     
@@ -1146,14 +564,36 @@
 
     <footer class="post-footer">
       
-
+        <div class="post-tags">
+          
+            <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" rel="tag"># 设计模式</a>
+          
+        </div>
       
 
       
+      
+      
 
       
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2022/10/12/%E5%AF%BB%E8%B7%AF%E5%8F%8AAI/" rel="prev" title="寻路及AI">
+                寻路及AI <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
       
-        <div class="post-eof"></div>
+
+      
       
     </footer>
   </div>
@@ -1163,10 +603,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -1174,6 +615,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -1194,8 +639,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -1255,6 +709,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#GOF-for-the-most"><span class="nav-number">1.</span> <span class="nav-text">GOF for the most</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F"><span class="nav-number">1.1.</span> <span class="nav-text">命令模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%AB%E5%85%83%E6%A8%A1%E5%BC%8F"><span class="nav-number">1.2.</span> <span class="nav-text">享元模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F"><span class="nav-number">1.3.</span> <span class="nav-text">观察者模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F"><span class="nav-number">1.4.</span> <span class="nav-text">单例模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F"><span class="nav-number">1.5.</span> <span class="nav-text">原型模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%8A%B6%E6%80%81%E6%A8%A1%E5%BC%8F"><span class="nav-number">1.6.</span> <span class="nav-text">状态模式</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BA%8F%E5%88%97"><span class="nav-number">2.</span> <span class="nav-text">序列</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%8C%E7%BC%93%E5%86%B2%E6%A8%A1%E5%BC%8F"><span class="nav-number">2.1.</span> <span class="nav-text">双缓冲模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B8%B8%E6%88%8F%E5%BE%AA%E7%8E%AF"><span class="nav-number">2.2.</span> <span class="nav-text">游戏循环</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9B%B4%E6%96%B0%E6%96%B9%E6%B3%95"><span class="nav-number">2.3.</span> <span class="nav-text">更新方法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%A1%8C%E4%B8%BA%E6%A8%A1%E5%BC%8F"><span class="nav-number">3.</span> <span class="nav-text">行为模式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%97%E8%8A%82%E7%A0%81"><span class="nav-number">3.1.</span> <span class="nav-text">字节码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%90%E7%B1%BB%E6%B2%99%E7%AE%B1"><span class="nav-number">3.2.</span> <span class="nav-text">子类沙箱</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B1%BB%E5%9E%8B%E5%AF%B9%E8%B1%A1"><span class="nav-number">3.3.</span> <span class="nav-text">类型对象</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%A7%A3%E8%97%95%E6%A8%A1%E5%BC%8F"><span class="nav-number">4.</span> <span class="nav-text">解藕模式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%84%E4%BB%B6%E6%A8%A1%E5%BC%8F"><span class="nav-number">4.1.</span> <span class="nav-text">组件模式</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%BB%84%E4%BB%B6%E9%97%B4%E9%80%9A%E4%BF%A1"><span class="nav-number">4.1.0.0.1.</span> <span class="nav-text">组件间通信</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8B%E4%BB%B6%E9%98%9F%E5%88%97"><span class="nav-number">4.2.</span> <span class="nav-text">事件队列</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%8D%E5%8A%A1%E5%AE%9A%E4%BD%8D%E6%A8%A1%E5%BC%8F"><span class="nav-number">4.3.</span> <span class="nav-text">服务定位模式</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BC%98%E5%8C%96%E6%A8%A1%E5%BC%8F"><span class="nav-number">5.</span> <span class="nav-text">优化模式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%B1%80%E9%83%A8%E6%80%A7"><span class="nav-number">5.1.</span> <span class="nav-text">数据局部性</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1395,6 +865,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
