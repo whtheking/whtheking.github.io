@@ -490,6 +490,169 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/26/%E8%B6%85%E9%98%88%E9%99%90%E7%A9%BA%E9%97%B4%E5%8A%9F%E8%83%BD%E5%A4%8D%E7%8E%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Velvet Palace">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2023/05/26/%E8%B6%85%E9%98%88%E9%99%90%E7%A9%BA%E9%97%B4%E5%8A%9F%E8%83%BD%E5%A4%8D%E7%8E%B0/" itemprop="url">超阈限空间功能复现</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2023-05-26T18:06:18+08:00">
+                2023-05-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%AE%BE%E8%AE%A1/" itemprop="url" rel="index">
+                    <span itemprop="name">设计</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%AE%BE%E8%AE%A1/%E7%A8%8B%E5%BA%8F/" itemprop="url" rel="index">
+                    <span itemprop="name">程序</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Pc411s7RY/?spm_id_from=333.999.0.0&vd_source=44d84ab5d1c80d34ca6ccf8855d6d8ea">演示视频</a></p>
+<p>参考：<a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=w6Y7Z1R_z9w">Superliminal Perspective Scaling</a></p>
+<h3 id="原理："><a href="#原理：" class="headerlink" title="原理："></a>原理：</h3><p>超阈限空间的核心玩法之一其实就是一个“鸽子为什么这么大”问题。</p>
+<p><img src="E:\Blog\source\imgs\20191108142907_62034.jpg" alt="20191108142907_62034"></p>
+<p>我们可以简单想象在视锥体内小鸽子A和大鸽子B之间的关系，只看图1可能依然无法在脑海里想像为什么A和B在视角中是相同大小，但是如果把透视投影反变换回正交投影下便可直观看出小鸽子A1和大鸽子B1大小“相同”。所以重现这一效果就变成了两个问题，那便是已知A或者B的大小和距离相机的位置求另一者的大小和距离。</p>
+<p><img src="E:\Blog\source\imgs\image-20240226173615835.png" alt="image-20240226173615835"></p>
+<p>从1中不难看出AB可以看作和相机构成等比三角形关系(O是相机点)<br>$$<br>\frac{Dis_{OA}}{Dis_{OB}}&#x3D;\frac{Size_{A}}{Size_{B}}<br>$$<br>而B的位置应该是最近有碰撞距离，只从物体中心进行射线检测无法避免穿模问题，所以需要至少对物体中心后方的一半顶点做射线检测才能找到最近位置。</p>
+<p><img src="E:\Blog\source\imgs\image-20240226175752190.png" alt="image-20240226175752190"></p>
+<p>UE获取StaticMesh模型点世界坐标方法</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">UPROPERTY</span>(VisibleAnywhere,BlueprintReadWrite)</span><br><span class="line">TArray&lt;FVector&gt; MeshPoints;</span><br><span class="line"><span class="built_in">UPROPERTY</span>(VisibleAnywhere,BlueprintReadWrite)</span><br><span class="line">UStaticMeshComponent* StaticMeshComponent;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">GetMeshPoints</span><span class="params">()</span></span>&#123;</span><br><span class="line">    MeshPoints.<span class="built_in">Empty</span>();</span><br><span class="line">	<span class="keyword">if</span> (StaticMeshComponent)</span><br><span class="line">	&#123;</span><br><span class="line">		UStaticMesh* StaticMesh = StaticMeshComponent-&gt;<span class="built_in">GetStaticMesh</span>();</span><br><span class="line">		<span class="keyword">if</span> (StaticMeshComponent-&gt;<span class="built_in">GetStaticMesh</span>()-&gt;RenderData)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span> (StaticMeshComponent-&gt;<span class="built_in">GetStaticMesh</span>()-&gt;RenderData-&gt;LODResources.<span class="built_in">Num</span>() &gt; <span class="number">0</span>)</span><br><span class="line">			&#123;</span><br><span class="line">				FPositionVertexBuffer* VertexBuffer = &amp;StaticMesh-&gt;RenderData-&gt;LODResources[<span class="number">0</span>].VertexBuffers.</span><br><span class="line">					PositionVertexBuffer;</span><br><span class="line">				<span class="keyword">if</span> (VertexBuffer)</span><br><span class="line">				&#123;</span><br><span class="line">					<span class="type">const</span> int32 VertexCount = VertexBuffer-&gt;<span class="built_in">GetNumVertices</span>();</span><br><span class="line">					<span class="keyword">for</span> (int32 index = <span class="number">0</span>; index &lt; VertexCount; index++)</span><br><span class="line">					&#123;</span><br><span class="line">						<span class="type">const</span> FVector worldSpaceVertexLocation = <span class="built_in">GetActorLocation</span>() + <span class="built_in">GetTransform</span>().<span class="built_in">TransformVector</span>(</span><br><span class="line">							VertexBuffer-&gt;<span class="built_in">VertexPosition</span>(index));</span><br><span class="line">						MeshPoints.<span class="built_in">Add</span>(worldSpaceVertexLocation);</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://example.com/2023/03/29/%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1450,7 +1613,7 @@
               
                 <a href="/archives/%7C%7C%20archive">
               
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1461,7 +1624,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -1472,7 +1635,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
